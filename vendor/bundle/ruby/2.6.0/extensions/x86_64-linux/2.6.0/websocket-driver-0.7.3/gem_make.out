@@ -1,0 +1,15 @@
+current directory: /home/eriyoshi/rails_apps/prostudy/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+/home/eriyoshi/.rbenv/versions/2.6.5/bin/ruby -I /home/eriyoshi/.rbenv/versions/2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200808-917-1rk58mn.rb extconf.rb
+creating Makefile
+
+current directory: /home/eriyoshi/rails_apps/prostudy/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/eriyoshi/rails_apps/prostudy/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/eriyoshi/rails_apps/prostudy/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20200808-917-ehyeyn
