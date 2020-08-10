@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./Header";
 import ReviewForm from "./ReviewForm";
+import Review from "./Review";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -57,7 +58,7 @@ const Proservice = (props) => {
     axios
       .post("/api/v1/reviews", { review, proservice_id })
       .then((resp) => {
-        const included = [...proservice.included, resp.data];
+        const included = [...proservice.data.included, resp.data.data];
         setProservice({ ...proservice, included });
         setReview({ title: "", description: "", score: 0 });
       })
@@ -70,6 +71,13 @@ const Proservice = (props) => {
     console.log(review);
   };
 
+  let reviews;
+  if (loaded && proservice.data.included) {
+    reviews = proservice.data.included.map((item, index) => {
+      return <Review key={index} attributes={item.attributes} />;
+    });
+  }
+
   return (
     <Wrapper>
       {loaded && (
@@ -80,7 +88,7 @@ const Proservice = (props) => {
                 attributes={proservice.data.data.attributes}
                 reviews={proservice.data.included}
               />
-              <div className="reviews"></div>
+              {reviews}
             </Main>
           </Column>
           <Column>

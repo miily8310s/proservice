@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import styled from "styled-components";
+import Rating from "../Rating/Rating";
 
 const Card = styled.div`
   border: 1px solid #efefef;
@@ -36,7 +37,8 @@ const Proservice = (props) => {
           {props.attributes.name}
         </a>
       </ProserviceName>
-      <div className="proservice-score">{props.attributes.avg_score}</div>
+      <Rating score={props.attributes.avg_score} />
+      {/* <div className="proservice-score">{props.attributes.avg_score}</div> */}
       <LinkWrapper>
         <Link to={`/proservices/${props.attributes.slug}`}>レビューを見る</Link>
       </LinkWrapper>
