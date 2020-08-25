@@ -25,6 +25,10 @@ const RatingBox = styled.div`
   position: relative;
   margin-top: 12px;
 
+  input {
+    display: none;
+  }
+
   label {
     cursor: pointer;
     width: 40px;

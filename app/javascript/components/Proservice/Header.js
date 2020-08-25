@@ -31,6 +31,9 @@ const Header = (props) => {
   const total = props.reviews.length;
   return (
     <Wrapper>
+      <a href="/" style={{ fontSize: 20 + "px" }}>
+        トップページ
+      </a>
       <img src={image_url} alt={name} />
       <h1>{name}</h1>
       <div>
